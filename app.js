@@ -10,6 +10,23 @@ const equalButton = document.querySelector(".btn-equal");
 
 let canAddDecimal = true;
 
+function canAddOperator() {
+  if (screenOutput.value === "") {
+    return false;
+  }
+  let lastCharacter = screenOutput.value.slice(-1);
+  if (
+    lastCharacter === "+" ||
+    lastCharacter === "-" ||
+    lastCharacter === "*" ||
+    lastCharacter === "/"
+  ) {
+    return false;
+  }
+
+  return true;
+}
+
 // Inmatning av siffror
 numberInputButton.forEach((element) => {
   element.addEventListener("click", () => {
@@ -34,23 +51,6 @@ operatorInputButton.forEach((element) => {
     }
   });
 });
-
-function canAddOperator() {
-  if (screenOutput.value === "") {
-    return false;
-  }
-  let lastCharacter = screenOutput.value.slice(-1);
-  if (
-    lastCharacter === "+" ||
-    lastCharacter === "-" ||
-    lastCharacter === "*" ||
-    lastCharacter === "/"
-  ) {
-    return false;
-  }
-
-  return true;
-}
 
 // Rensa skärmen
 clearButton.addEventListener("click", () => {

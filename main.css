@@ -19,7 +19,7 @@ body {
   font-size: 7rem;
   padding: 0.5rem;
   background: rgb(41, 41, 56);
-  color: white;
+  color: #00e676;
   border: none;
 }
 
@@ -36,10 +36,11 @@ button {
   transition: all 2s ease;
 }
 button:hover {
-  background: blue;
+  background: #9e9e9e;
 }
+
 .btn-operator {
-  background: rgb(245, 146, 62);
+  background: #ff8f00;
   color: white;
 }
 .btn-number {
@@ -51,8 +52,8 @@ button:hover {
   font-size: 4rem;
 }
 .btn-equal {
-  background: green;
+  background: #00c853;
 }
 .btn-clear {
-  background: red;
+  background: #f44336;
 }
